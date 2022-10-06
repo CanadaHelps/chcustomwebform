@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+
+<table>
+  <base>CRM/Chcustomwebform</base>
+  <class>WebformCustomPanel</class>
+  <name>civicrm_webform_custom_panel</name>
+  <comment>FIXME</comment>
+  <log>true</log>
+
+  <field>
+    <name>id</name>
+    <type>int unsigned</type>
+    <required>true</required>
+    <comment>Unique WebformCustomPanel ID</comment>
+    <html>
+      <type>Number</type>
+    </html>
+  </field>
+  <primaryKey>
+    <name>id</name>
+    <autoincrement>true</autoincrement>
+  </primaryKey>
+  <field>
+    <name>profile_id</name>
+    <type>int unsigned</type>
+    <comment>FK to UF Group</comment>
+    <add>5.18</add>
+  </field>
+  <foreignKey>
+    <name>profile_id</name>
+    <table>civicrm_uf_group</table>
+    <key>id</key>
+    <add>4.4</add>
+    <onDelete>CASCADE</onDelete>
+  </foreignKey>
+  <field>
+    <name>value</name>
+    <title>Value of UF Group data</title>
+    <type>text</type>
+    <import>true</import>
+    <add>5.18</add>
+  </field>
+  <field>
+    <name>created_date</name>
+    <type>datetime</type>
+    <comment> When was the setting created </comment>
+    <add>5.18</add>
+  </field>
+  <field>
+    <name>created_id</name>
+    <title>Created ID</title>
+    <type>int unsigned</type>
+    <comment>who created this setting </comment>
+    <import>true</import>
+    <add>5.18</add>
+  </field>
+</table>
