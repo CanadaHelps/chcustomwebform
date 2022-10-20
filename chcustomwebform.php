@@ -196,7 +196,9 @@ function chcustomwebform_civicrm_alterContent( &$content, $context, $tplName, &$
       $profile = $profile."
       <style>
       .crm-container .help{background:$titlebar_background_color;color:$titlebar_text_color;}
-      .crm-container .btn-primary:hover{background-color:$button_link_color;}
+      .crm-container .btn-primary.active, .crm-container .btn-primary:active, .crm-container .btn-primary:focus,.crm-container .btn-primary:hover{
+        background-color:$button_link_color!important;
+      }
       .crm-container .btn-primary{background-color:$button_link_color;}
       .crm-container {background:$background_color;}
       </style>";
